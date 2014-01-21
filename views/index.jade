@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  
+  h2 TWEET MAP
+  div#map
+  
+  h2 AVERAGE SENTIMENT PER LONGITUDE
+  div#visualisation
+  
+  h2 CRAWLED TWEETS
+  each tweet, i in tweets
+    h3 #{tweet.value.user}
+    p #{tweet.value.text}
+    if tweet.value.coordinates
+      p <strong>location:</strong> #{tweet.value.coordinates.coordinates[0]}, #{tweet.value.coordinates.coordinates[1]}
+    img(src="#{tweet.sentiment.emoticon}")
+    
+  script.
+    new Chart(!{JSON.stringify(tweets)});
+    new Map(!{JSON.stringify(tweets)});
+    

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  
+  h2 average sentiment per longitude
+  div#visualisation
+  
+  h2 count emoticons
+  each emoticon, j in emoticonCount
+      p #{emoticon._id}: #{emoticon.value.count}
+  
+  h2 tweets
+  each tweet, i in tweets
+    h3 #{tweet.value.user}
+    p #{tweet.value.text}
+    if tweet.value.coordinates
+      p <strong>location:</strong> #{tweet.value.coordinates.coordinates[0]}, #{tweet.value.coordinates.coordinates[1]}
+    img(src="#{tweet.sentiment.emoticon}")
+    
+  script.
+    new Chart(!{JSON.stringify(tweets)});
+    
