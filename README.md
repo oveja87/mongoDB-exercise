@@ -1,6 +1,3 @@
-mongoDB-exercise
-================
-
 # Data Engineering Task 3 - MongoDB
 
 1. Crawl Tweets via Twitter API and save them in files
