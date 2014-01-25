@@ -60,7 +60,9 @@ Each file contains only 500 Tweets, because otherwise, the files became to large
 
 First we installed mongoDB on windows. After that we created a data directory within our nodeapp. There the data are stored.
 We started mongoDB by typing the following command from the mongo directory:
-	mongod --dbpath <data directory path>.
+
+	> mongod --dbpath <data directory path>
+	
 We also used rockmongo for this exercise.
 First we used its json import function to import the created textfiles. Moreover, we used rockmongo to perform some of the mapreduce jobs in the following exercises.
 
@@ -219,10 +221,14 @@ Additionally, a list of all tweets with the emoticon from the map is displayed.
 * Install node.js + npm
 * Install mongoDB
 * start mongo db with dbpath from the mongoBD folder
-	mongod --dbpath <data directory path>
+
+	> \> mongod --dbpath \<data directory path\>
+	
 * call the following commands from the node command line from the app folder to install dependencies and run the app
-	npm install
-	node app.js
+
+	> \> npm install
+	
+	> \> node app.js
 
 
 ##5. Contributors
