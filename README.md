@@ -1,11 +1,12 @@
 # Data Engineering Task 3 - MongoDB
-
-1. Crawl Tweets via Twitter API and save them in files
-2. MongoDB
-3. Visualization
+ 
+1. Crawl Tweets via Twitter API and save them in files (Exercise 1)
+2. MongoDB (Exercise 2)
+3. Visualization (Exercise 3)
 4. Installation
+5. Contributors
 
-## Exercise 1
+##1. Crawl Tweets (Exercise 1)
 We realized our tweet crawler with the help of [node.js](http://nodejs.org/). The basic node app is created with [express](https://github.com/visionmedia/express)
 To acces the Twitter API from node.js, we used the Twitter API Client [twit](https://github.com/ttezel/twit), which supports both the REST and Streaming API.
 To get an access token for the API, we registrated an app on [dev.twitter.com](https://dev.twitter.com).
@@ -53,7 +54,7 @@ The following code, which can be found in app.js, crawls the tweets from the API
 
 Each file contains only 500 Tweets, because otherwise, the files became to large to import them into mongoDB. An example file is tweets0.json.
 	
-## Exercise 2
+##2. Mongo DB (Exercise 2)
 
 ### 2a.
 
@@ -197,7 +198,7 @@ Additionally, we added a link to a smiley icon, which we will display in the fol
 		db.tweets_without_slang.update({_id:element._id}, {$set: {sentiment: sentiment}});
 	});
 	
-## Exercise 3
+##3. Visualisation (Exercise 3)
 
 We tried two different kinds of visualisations.
 The code can be found in routes/index.js, views/index.jade, public/javascripts/map.js and public/javascripts/chart.js.
@@ -213,9 +214,15 @@ The second visualisation shows a barchart with the distributions of happyness am
 Additionally, a list of all tweets with the emoticon from the map is displayed.
 
 
-## Installation of the app
+##4. Installation of the app
 
 * Install node.js + npm
 * call the following commands from the node command line in the app folder
 	npm install
 	node app.js
+
+
+##5. Contributors
+
+* [Elisabeth Lang](https://github.com/laneli)
+* [Katrin Hewer](https://github.com/oveja87)
