@@ -217,7 +217,10 @@ Additionally, a list of all tweets with the emoticon from the map is displayed.
 ##4. Installation of the app
 
 * Install node.js + npm
-* call the following commands from the node command line in the app folder
+* Install mongoDB
+* start mongo db with dbpath from the mongoBD folder
+	mongod --dbpath <data directory path>
+* call the following commands from the node command line from the app folder to install dependencies and run the app
 	npm install
 	node app.js
 
