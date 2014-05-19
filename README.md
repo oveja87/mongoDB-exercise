@@ -1,4 +1,4 @@
-# Data Engineering Task 3 - MongoDB
+# Example of a tweet crawler with mongo.db, node.js, leaflet.js and d3.js
  
 1. Crawl Tweets via Twitter API and save them in files (Exercise 1)
 2. MongoDB (Exercise 2)
