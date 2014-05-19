@@ -1,13 +1,13 @@
 # Example of a tweet crawler with mongo.db, node.js, leaflet.js and d3.js
  
-1. Crawl Tweets via Twitter API and save them in files (Exercise 1)
-2. MongoDB (Exercise 2)
-3. Visualization (Exercise 3)
+1. Crawl Tweets via Twitter API and save them in files
+2. MongoDB
+3. Visualization
 4. Installation
 5. Contributors
 
-##1. Crawl Tweets (Exercise 1)
-We realized our tweet crawler with the help of [node.js](http://nodejs.org/). The basic node app is created with [express](https://github.com/visionmedia/express)
+##1. Crawl Tweets
+We realized the tweet crawler with the help of [node.js](http://nodejs.org/). The basic node app is created with [express](https://github.com/visionmedia/express)
 To acces the Twitter API from node.js, we used the Twitter API Client [twit](https://github.com/ttezel/twit), which supports both the REST and Streaming API.
 To get an access token for the API, we registrated an app on [dev.twitter.com](https://dev.twitter.com).
 
@@ -54,7 +54,7 @@ The following code, which can be found in app.js, crawls the tweets from the API
 
 Each file contains only 500 Tweets, because otherwise, the files became to large to import them into mongoDB. An example file is tweets0.json.
 	
-##2. Mongo DB (Exercise 2)
+##2. Mongo DB
 
 ### 2a.
 
@@ -127,7 +127,7 @@ We converted the slangdict into a json file and imported it into the database. W
 ### 2d.
 We converted the subjectivity lexicon into a json file (subj.json) and imported it into the database.
 		
-### 2e./2f
+### 2e.
 For the Emoticon sentiment values we created a json file with a list of smileys (emoticons.json) which we have found on [wikipedia]() and loaded it into the database.
 Additionally, we added a link to a smiley icon, which we will display in the following exercise.
 
@@ -200,7 +200,7 @@ Additionally, we added a link to a smiley icon, which we will display in the fol
 		db.tweets_without_slang.update({_id:element._id}, {$set: {sentiment: sentiment}});
 	});
 	
-##3. Visualisation (Exercise 3)
+##3. Visualisation
 
 We tried two different kinds of visualisations.
 The code can be found in routes/index.js, views/index.jade, public/javascripts/map.js and public/javascripts/chart.js.
